@@ -41,6 +41,7 @@ function isValidInput(grid) {
     for (var i = 0; i < 8; i++) {     
       for(var j = i+1; j < 9; j++){
         if (grid[row][i] == grid[row][j] && grid[row][i] != 0) return false;
+        if (grid[row][i]<0 || grid[row][j]<0 || grid[row][i]>9 || grid[row][j]>9) return false;
       }       
     }
   }
